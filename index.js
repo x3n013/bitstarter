@@ -4,7 +4,7 @@ var app = express();
 var fs = require("fs")
 index_buff = fs.readFileSync('index.html')
 index_string = index_buff.toString()
-app.set('port', (process.env.PORT || 5000))
+app.set('port', (process.env.PORT || 8080 ))
 app.use(express.static(__dirname + '/public'))
 
 app.get('/', function(request, response) {
